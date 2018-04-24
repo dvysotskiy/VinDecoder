@@ -1,9 +1,16 @@
 # VIN Validator and Decoder
 Validates and decodes vehicle identification numbers (VIN). 
 
+Missing WMIs - decoded 19M VINs; missed 900K.
+
+TODO: 
+- [ ] Complete VDS decipher (positions 4-8)
+- [ ] Complete manufacturing plant desipher (position 11)
+- [ ] Populate DB with vehicle specs
+- [ ] Add missing WMI codes
+
+
 ## Validator
-
-
 
 #### Length
 Starting with 1981, a valid VIN must be 17 characters in length. 
@@ -66,10 +73,10 @@ The first three characters of the VIN uniquely identify the vehicle manufacturer
 
 If the 7th character is numeric, the model year is between 1981 and 2009; otherwise, 2010 and later. In addition to restricted characters, U, Z and 0 (zero) are not permitted in 10th position used to determine vehicle year.
 
-|Year| 2003 |  2004 |  2005 | 2006 | 2007 | 2008 |  2009 | 2010 | 2011 | 2012  |  2013 |  2014 | 2015 | 2016 | 2017 | 2018 | 2019 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|Before 2010 | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  | No  | No | No  | No  | No  | No  | No  |  No | No  |  No |
-|Code | 3  | 4  | 5  | 6  | 7  | 8  | 9  | A  | B | C  | D  | E  | F  | G  | H | J  | K |
+|Year| 2005 | 2006 | 2007 | 2008 |  2009 | 2010 | 2011 | 2012  |  2013 |  2014 | 2015 | 2016 | 2017 | 2018 | 
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Before 2010 | Yes  | Yes  | Yes  | Yes  | Yes  | No  | No | No  | No  | No  | No  | No  |  No | No  |
+|Code | 5  | 6  | 7  | 8  | 9  | A  | B | C  | D  | E  | F  | G  | H | J  | 
 
 *Supported year range is 1980 - 2039*
 
@@ -78,5 +85,3 @@ If the 7th character is numeric, the model year is between 1981 and 2009; otherw
 Sequential or serial number assigned by the manufacturer is stored in position 12 - 17. Small manufacturers producing less than 500 vehicles annually can be identified by the characters in position 12 - 14.
 
 
-
-***Requires Sqlite database***
