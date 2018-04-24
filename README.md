@@ -38,7 +38,7 @@ Every letter is converted to a number using the following matrix:
 Compute a **sum** of products of each position by multiplying transliterated VIN character by a weighted factor.
 
 |Position| 1  |  2 |  3 | 4  | 5  | 6  |  7 | 8 | 9 | 10  |  11 |  12 | 13 | 14 | 15 | 16 | 17 |
-|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |Weight | 8  | 7  | 6  | 5  | 4  | 3  | 2  | 10  | 0 | 9  | 8  | 7  | 6  | 5  |  4 | 3  |  2 |
 
 
@@ -67,7 +67,7 @@ The first three characters of the VIN uniquely identify the vehicle manufacturer
 If the 7th character is numeric, the model year is between 1981 and 2009; otherwise, 2010 and later. In addition to restricted characters, U, Z and 0 (zero) are not permitted in 10th position used to determine vehicle year.
 
 |Year| 2003 |  2004 |  2005 | 2006 | 2007 | 2008 |  2009 | 2010 | 2011 | 2012  |  2013 |  2014 | 2015 | 2016 | 2017 | 2018 | 2019 |
-|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |Before 2010 | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  | Yes  | No  | No | No  | No  | No  | No  | No  |  No | No  |  No |
 |Code | 3  | 4  | 5  | 6  | 7  | 8  | 9  | A  | B | C  | D  | E  | F  | G  | H | J  | K |
 
